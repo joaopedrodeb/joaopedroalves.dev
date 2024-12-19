@@ -102,6 +102,13 @@
             color: orange;
         }
 
+        .education-images img {
+            width: 100%;
+            max-width: 400px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
         /* Responsive Menu */
         @media (max-width: 768px) {
             .menu {
@@ -117,7 +124,15 @@
                 justify-content: center;
                 gap: 10px;
             }
+
+            .education-images {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
         }
+
+        
     </style>
 </head>
 <body>
@@ -154,13 +169,20 @@
 
     <main class="main container mt-4">
         <section id="about" class="about">
-            <h2>About project</h2>
-            <p>This project was designed for professional backend developers as a portfolio. The aesthetic and simple design highlights the skills, experience, and profile of the developer using HTML, CSS, and JavaScript. No frameworks, only pure web technologies.</p>
+            <h2>About Me</h2>
+            <p>I am João Pedro Alves, a dedicated backend developer with a passion for solving complex problems and building efficient solutions. With experience in designing and implementing scalable systems, I bring expertise in various programming languages and tools. My commitment to continuous learning and collaboration drives my success in delivering impactful projects that align with business goals. Explore my portfolio to learn more about my skills, professional journey, and the innovative projects I've worked on.</p>
         </section>
 
         <section id="education" class="mt-5">
             <h2>Education</h2>
-            <p>Details about educational background and certifications go here.</p>
+            <div class="education-images text-center">
+                <img src="https://media.licdn.com/dms/image/v2/D4D2DAQGId5b8_WJSkA/profile-treasury-image-shrink_1920_1920/profile-treasury-image-shrink_1920_1920/0/1691267686928?e=1735257600&v=beta&t=-mlakK7n0zRahrSanbaavwmlCX_navhJrDiteTTSPjI" alt="IFMT Graduation">
+                <img src="https://media.licdn.com/dms/image/v2/D4D12AQEPSU81aFzZkg/article-inline_image-shrink_1500_2232/article-inline_image-shrink_1500_2232/0/1683934669554?e=1740009600&v=beta&t=OWPFiNuOdCSaO5w1NWLaJKCRTPBJtZ5HubDhrL-0jCc" alt="Research Presentation">
+                <img src="https://media.licdn.com/dms/image/v2/D4D12AQFDekn3JSiz9A/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1679320995301?e=1740009600&v=beta&t=TxZmQuEe3NcrIi3Y7z6oBJChYSDFuB7XsAS51SPMPAQ" alt="Team Collaboration">
+                <img src="https://media.licdn.com/dms/image/v2/D4D12AQGRv7Sbqchn2A/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1679321406671?e=1740009600&v=beta&t=DnOE2NMZN5UV-FaU72Zo0c-XMjbhPViqeXOk5AbQCj0" alt="Scientific Presentation">
+            </div>
+            <p>During my time at Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso (2018-2022), I graduated with a GPA of 8.0, participating in significant scientific projects such as PetAutoNet and WhiteRabbits. My passion for technology extended into active involvement in research presentations and team collaborations, focusing on the application of innovative methodologies and technologies.</p>
+            <p>Currently, I am pursuing a Bachelor's in Computer Science at Anhanguera Educacional, further enhancing my knowledge in advanced technologies and systems design.</p>
         </section>
 
         <section id="articles" class="mt-5">
