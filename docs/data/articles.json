@@ -1,0 +1,90 @@
+[
+  {
+    "slug": "event-driven-dotnet",
+    "title": {
+      "pt": "Arquitetura orientada a eventos com .NET e Kafka",
+      "en": "Event-driven architecture with .NET and Kafka"
+    },
+    "description": {
+      "pt": "Uma introdução prática à construção de serviços desacoplados com .NET e Kafka.",
+      "en": "A practical introduction to building decoupled services with .NET and Kafka."
+    },
+    "content": {
+      "pt": "articles/event-driven-dotnet.pt.md",
+      "en": "articles/event-driven-dotnet.en.md"
+    },
+    "image": "images/articles/event-driven-dotnet.webp",
+    "publishedAt": "2026-08-01",
+    "updatedAt": "2026-08-01",
+    "readingTime": 8,
+    "tags": [".NET", "Kafka", "Event-Driven Architecture"],
+    "featured": true,
+    "status": "draft"
+  },
+  {
+    "slug": "observability-aws-dotnet",
+    "title": {
+      "pt": "Observabilidade em aplicações .NET executadas na AWS",
+      "en": "Observability in .NET applications running on AWS"
+    },
+    "description": {
+      "pt": "Práticas para instrumentação, métricas, tracing e troubleshooting em ambientes distribuídos na nuvem.",
+      "en": "Practices for instrumentation, metrics, tracing, and troubleshooting in distributed cloud environments."
+    },
+    "content": {
+      "pt": "articles/observability-aws-dotnet.pt.md",
+      "en": "articles/observability-aws-dotnet.en.md"
+    },
+    "image": "images/articles/observability-aws-dotnet.webp",
+    "publishedAt": "2026-08-02",
+    "updatedAt": "2026-08-02",
+    "readingTime": 7,
+    "tags": [".NET", "AWS", "Observability"],
+    "featured": false,
+    "status": "draft"
+  },
+  {
+    "slug": "rag-mcp-guardrails",
+    "title": {
+      "pt": "RAG, MCP e Guardrails em soluções com LLMs",
+      "en": "RAG, MCP, and Guardrails in LLM solutions"
+    },
+    "description": {
+      "pt": "Como combinar recuperação de contexto, protocolos de contexto e proteção de fluxos de IA generativa.",
+      "en": "How to combine retrieval, context protocols, and protection patterns in generative AI flows."
+    },
+    "content": {
+      "pt": "articles/rag-mcp-guardrails.pt.md",
+      "en": "articles/rag-mcp-guardrails.en.md"
+    },
+    "image": "images/articles/rag-mcp-guardrails.webp",
+    "publishedAt": "2026-08-03",
+    "updatedAt": "2026-08-03",
+    "readingTime": 9,
+    "tags": ["Generative AI", "LLM", "RAG", "MCP"],
+    "featured": true,
+    "status": "draft"
+  },
+  {
+    "slug": "legacy-modernization-microservices",
+    "title": {
+      "pt": "Modernização de sistemas legados para microsserviços",
+      "en": "Modernizing legacy systems into microservices"
+    },
+    "description": {
+      "pt": "Uma abordagem para decompor sistemas antigos sem interromper o negócio ou comprometer a confiabilidade.",
+      "en": "An approach to decomposing legacy systems without disrupting the business or compromising reliability."
+    },
+    "content": {
+      "pt": "articles/legacy-modernization-microservices.pt.md",
+      "en": "articles/legacy-modernization-microservices.en.md"
+    },
+    "image": "images/articles/legacy-modernization-microservices.webp",
+    "publishedAt": "2026-08-04",
+    "updatedAt": "2026-08-04",
+    "readingTime": 10,
+    "tags": ["Microservices", "Architecture", "Legacy Systems"],
+    "featured": false,
+    "status": "draft"
+  }
+]
