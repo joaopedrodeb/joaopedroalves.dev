@@ -1,0 +1,50 @@
+[
+  {
+    "id": "distributed-processing",
+    "title": {
+      "pt": "Processamento distribuído de dados",
+      "en": "Distributed data processing"
+    },
+    "description": {
+      "pt": "Arquitetura backend para processamento assíncrono, mensageria e monitoramento em fluxo distribuído.",
+      "en": "Backend architecture for asynchronous processing, messaging, and observability in a distributed flow."
+    },
+    "technologies": [".NET", "Kafka", "Redis", "PostgreSQL", "Docker"],
+    "image": "images/projects/distributed-processing.webp",
+    "repository": "",
+    "demo": "",
+    "featured": true
+  },
+  {
+    "id": "api-modernization",
+    "title": {
+      "pt": "Modernização de APIs legadas",
+      "en": "Legacy API modernization"
+    },
+    "description": {
+      "pt": "Estratégia de evolução de serviços legados para APIs robustas, versionadas e sustentáveis.",
+      "en": "Strategy to evolve legacy services into robust, versioned, and maintainable APIs."
+    },
+    "technologies": ["C#", ".NET 8", "Azure", "SQL Server", "OpenAPI"],
+    "image": "images/projects/api-modernization.webp",
+    "repository": "",
+    "demo": "",
+    "featured": true
+  },
+  {
+    "id": "event-driven-platform",
+    "title": {
+      "pt": "Plataforma orientada a eventos",
+      "en": "Event-driven platform"
+    },
+    "description": {
+      "pt": "Implementação de integrações assíncronas com desacoplamento, rastreabilidade e resiliência operacional.",
+      "en": "Implementation of asynchronous integrations with decoupling, traceability, and operational resilience."
+    },
+    "technologies": ["Java", "Kafka", "MongoDB", "Spring Boot", "Kubernetes"],
+    "image": "images/projects/event-driven-platform.webp",
+    "repository": "",
+    "demo": "",
+    "featured": false
+  }
+]

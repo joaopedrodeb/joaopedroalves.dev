@@ -1,0 +1,340 @@
+{
+  "pt": {
+    "metaTitle": "João Pedro Alves | Desenvolvedor Backend Sênior",
+    "metaDescription": "Portfolio de João Pedro Alves, Desenvolvedor Backend Sênior especializado em .NET, APIs, microsserviços, cloud e inteligência artificial generativa.",
+    "nav": {
+      "about": "Sobre",
+      "specialties": "Especialidades",
+      "stack": "Stack",
+      "experience": "Experiência",
+      "projects": "Projetos",
+      "articles": "Artigos",
+      "education": "Formação",
+      "contact": "Contato"
+    },
+    "cta": {
+      "projects": "Ver projetos",
+      "articles": "Ler artigos",
+      "github": "Acessar GitHub",
+      "linkedin": "Acessar LinkedIn",
+      "contact": "Entrar em contato"
+    },
+    "hero": {
+      "title": "Engenharia Backend para sistemas escaláveis e confiáveis",
+      "subtitle": "Desenvolvedor Backend Sênior especializado em .NET, APIs, microsserviços, cloud e soluções com IA generativa.",
+      "badge": "Disponível para desafios técnicos"
+    },
+    "sections": {
+      "about": "Sobre",
+      "specialties": "Especialidades",
+      "stack": "Stack tecnológica",
+      "experience": "Experiência profissional",
+      "projects": "Projetos",
+      "articles": "Artigos",
+      "education": "Certificações e formação",
+      "contact": "Contato"
+    },
+    "about": {
+      "eyebrow": "Perfil profissional",
+      "heading": "Construo software backend que conecta negócio, arquitetura e operação.",
+      "paragraph1": "Desenvolvedor Backend Sênior com mais de 6 anos de experiência em desenvolvimento de software, atuando principalmente com C#/.NET, além de Java e Python.",
+      "paragraph2": "Minha atuação abrange APIs, microsserviços, sistemas distribuídos, mensageria, cache, bancos relacionais e NoSQL, além de cloud e infraestrutura em AWS e Azure.",
+      "paragraph3": "Trabalho com arquitetura orientada a eventos, observabilidade e evolução de sistemas em produção, com foco em confiabilidade, escalabilidade e manutenção sustentável."
+    },
+    "specialties": {
+      "title": "Especialidades",
+      "backend": {
+        "title": "Backend Engineering",
+        "text": "C#, .NET, Java, Python, APIs REST, processamento assíncrono e serviços de alta disponibilidade."
+      },
+      "architecture": {
+        "title": "Software Architecture",
+        "text": "Microsserviços, sistemas distribuídos, arquitetura orientada a eventos, mensageria e integração entre sistemas."
+      },
+      "cloud": {
+        "title": "Cloud & DevOps",
+        "text": "AWS, Azure, Docker, Kubernetes, GitHub Actions, CI/CD, infraestrutura e deploy."
+      },
+      "data": {
+        "title": "Data & Messaging",
+        "text": "Kafka, Redis, SQL Server, PostgreSQL, MongoDB, bancos relacionais e NoSQL."
+      },
+      "observability": {
+        "title": "Observability",
+        "text": "Logs estruturados, métricas, tracing, monitoramento, troubleshooting e sustentação de produção."
+      },
+      "ai": {
+        "title": "Generative AI",
+        "text": "LLMs, Retrieval-Augmented Generation, Model Context Protocol, AI Guardrails, Prompt Engineering e integrações com ferramentas."
+      }
+    },
+    "stack": {
+      "title": "Stack tecnológica",
+      "categories": {
+        "languages": "Languages",
+        "backend": "Backend",
+        "architecture": "Architecture",
+        "cloud": "Cloud",
+        "data": "Data",
+        "devops": "DevOps",
+        "observability": "Observability",
+        "ai": "Generative AI"
+      },
+      "items": {
+        "languages": ["C#", ".NET", "Java", "Python", "TypeScript", "SQL"],
+        "backend": ["ASP.NET Core", "Spring Boot", "REST APIs", "gRPC", "WebSockets"],
+        "architecture": ["Microservices", "Distributed Systems", "Event-Driven Architecture", "DDD", "Hexagonal Architecture"],
+        "cloud": ["AWS", "Azure", "Serverless", "Cloud Architecture"],
+        "data": ["Kafka", "Redis", "SQL Server", "PostgreSQL", "MongoDB"],
+        "devops": ["Docker", "Kubernetes", "GitHub Actions", "CI/CD", "Terraform"],
+        "observability": ["OpenTelemetry", "Prometheus", "Grafana", "ELK", "Application Insights"],
+        "ai": ["LLMs", "RAG", "MCP", "AI Guardrails", "Prompt Engineering"]
+      }
+    },
+    "experience": {
+      "title": "Experiência profissional",
+      "timeline": [
+        {
+          "period": "2023 — Presente",
+          "role": "Senior Backend Developer",
+          "company": "Backend / Platform engineering",
+          "description": "Desenvolvimento e evolução de serviços backend, integrações distribuídas e melhoria de confiabilidade em ambientes cloud, com foco em APIs, mensageria e observabilidade."
+        },
+        {
+          "period": "2020 — 2023",
+          "role": "Backend Developer",
+          "company": "Product engineering",
+          "description": "Modernização de sistemas legados, implementação de microsserviços e atuação em qualidade de software, arquitetura e deploy contínuo."
+        },
+        {
+          "period": "2018 — 2020",
+          "role": "Software Engineer",
+          "company": "Applications",
+          "description": "Atuação em desenvolvimento de aplicações empresariais, APIs e integração entre sistemas, com foco em manutenção e evolução em produção."
+        }
+      ]
+    },
+    "projects": {
+      "title": "Projetos",
+      "empty": "Nenhum projeto encontrado.",
+      "repo": "Repositório",
+      "demo": "Demonstração",
+      "featured": "Destaque"
+    },
+    "articles": {
+      "title": "Artigos",
+      "search": "Buscar artigos",
+      "all": "Todos",
+      "featured": "Destaque",
+      "readMore": "Leia mais",
+      "draft": "Rascunho",
+      "sample": "Artigo de exemplo",
+      "empty": "Nenhum artigo encontrado para este filtro.",
+      "sort": "Ordenar por",
+      "sortOptions": {
+        "newest": "Mais recentes",
+        "oldest": "Mais antigos"
+      },
+      "published": "Publicado",
+      "readingTime": "min de leitura",
+      "share": "Compartilhar",
+      "back": "Voltar para artigos",
+      "tableOfContents": "Sumário",
+      "toc": "Navegação rápida"
+    },
+    "education": {
+      "title": "Certificações e formação",
+      "items": [
+        "Foco em desenvolvimento backend, arquitetura distribuída e engenharia de software orientada a produto.",
+        "Experiência prática em evolução de sistemas legados e migração para arquiteturas modernas.",
+        "Atuação contínua em cloud, DevOps e engenharia de confiabilidade no ciclo completo de vida do software."
+      ]
+    },
+    "contact": {
+      "title": "Contato",
+      "text": "Estou disponível para discutir arquitetura, backend, evolução de sistemas, cloud e soluções com IA generativa.",
+      "email": "joaopedrodevdb@outlook.com",
+      "linkedin": "https://www.linkedin.com/in/joaopedroalves",
+      "github": "https://github.com/joaopedrodeb",
+      "location": "Cuiabá, Mato Grosso, Brasil",
+      "note": "Site estático: para enviar mensagens, conecte um serviço externo de e-mail ou formulário."
+    },
+    "footer": {
+      "rights": "Todos os direitos reservados."
+    },
+    "language": "Idioma",
+    "theme": "Tema",
+    "backToTop": "Voltar ao topo",
+    "loading": "Carregando",
+    "notFound": "Não encontrado"
+  },
+  "en": {
+    "metaTitle": "João Pedro Alves | Senior Backend Developer",
+    "metaDescription": "Portfolio of João Pedro Alves, Senior Backend Developer focused on .NET, APIs, microservices, cloud, and Generative AI.",
+    "nav": {
+      "about": "About",
+      "specialties": "Specialties",
+      "stack": "Stack",
+      "experience": "Experience",
+      "projects": "Projects",
+      "articles": "Articles",
+      "education": "Education",
+      "contact": "Contact"
+    },
+    "cta": {
+      "projects": "View projects",
+      "articles": "Read articles",
+      "github": "Open GitHub",
+      "linkedin": "Open LinkedIn",
+      "contact": "Get in touch"
+    },
+    "hero": {
+      "title": "Backend engineering for scalable and reliable systems",
+      "subtitle": "Senior Backend Developer specialized in .NET, APIs, microservices, cloud, and Generative AI solutions.",
+      "badge": "Available for technical challenges"
+    },
+    "sections": {
+      "about": "About",
+      "specialties": "Specialties",
+      "stack": "Technology stack",
+      "experience": "Professional experience",
+      "projects": "Projects",
+      "articles": "Articles",
+      "education": "Certifications and education",
+      "contact": "Contact"
+    },
+    "about": {
+      "eyebrow": "Professional profile",
+      "heading": "I build backend software that connects business, architecture, and operations.",
+      "paragraph1": "Senior Backend Developer with over 6 years of experience in software development, primarily working with C#/.NET, as well as Java and Python.",
+      "paragraph2": "My work spans APIs, microservices, distributed systems, messaging, caching, relational and NoSQL databases, as well as cloud infrastructure on AWS and Azure.",
+      "paragraph3": "I work with event-driven architecture, observability, and production system evolution, with a focus on reliability, scalability, and sustainable maintenance."
+    },
+    "specialties": {
+      "title": "Specialties",
+      "backend": {
+        "title": "Backend Engineering",
+        "text": "C#, .NET, Java, Python, REST APIs, asynchronous processing, and highly available services."
+      },
+      "architecture": {
+        "title": "Software Architecture",
+        "text": "Microservices, distributed systems, event-driven architecture, messaging, and integration between systems."
+      },
+      "cloud": {
+        "title": "Cloud & DevOps",
+        "text": "AWS, Azure, Docker, Kubernetes, GitHub Actions, CI/CD, infrastructure, and deployment."
+      },
+      "data": {
+        "title": "Data & Messaging",
+        "text": "Kafka, Redis, SQL Server, PostgreSQL, MongoDB, relational and NoSQL databases."
+      },
+      "observability": {
+        "title": "Observability",
+        "text": "Structured logs, metrics, tracing, monitoring, troubleshooting, and production support."
+      },
+      "ai": {
+        "title": "Generative AI",
+        "text": "LLMs, Retrieval-Augmented Generation, Model Context Protocol, AI Guardrails, Prompt Engineering, and tool integrations."
+      }
+    },
+    "stack": {
+      "title": "Technology stack",
+      "categories": {
+        "languages": "Languages",
+        "backend": "Backend",
+        "architecture": "Architecture",
+        "cloud": "Cloud",
+        "data": "Data",
+        "devops": "DevOps",
+        "observability": "Observability",
+        "ai": "Generative AI"
+      },
+      "items": {
+        "languages": ["C#", ".NET", "Java", "Python", "TypeScript", "SQL"],
+        "backend": ["ASP.NET Core", "Spring Boot", "REST APIs", "gRPC", "WebSockets"],
+        "architecture": ["Microservices", "Distributed Systems", "Event-Driven Architecture", "DDD", "Hexagonal Architecture"],
+        "cloud": ["AWS", "Azure", "Serverless", "Cloud Architecture"],
+        "data": ["Kafka", "Redis", "SQL Server", "PostgreSQL", "MongoDB"],
+        "devops": ["Docker", "Kubernetes", "GitHub Actions", "CI/CD", "Terraform"],
+        "observability": ["OpenTelemetry", "Prometheus", "Grafana", "ELK", "Application Insights"],
+        "ai": ["LLMs", "RAG", "MCP", "AI Guardrails", "Prompt Engineering"]
+      }
+    },
+    "experience": {
+      "title": "Professional experience",
+      "timeline": [
+        {
+          "period": "2023 — Present",
+          "role": "Senior Backend Developer",
+          "company": "Backend / Platform engineering",
+          "description": "Development and evolution of backend services, distributed integrations, and reliability improvements in cloud environments, with a focus on APIs, messaging, and observability."
+        },
+        {
+          "period": "2020 — 2023",
+          "role": "Backend Developer",
+          "company": "Product engineering",
+          "description": "Modernization of legacy systems, implementation of microservices, and work on software quality, architecture, and continuous deployment."
+        },
+        {
+          "period": "2018 — 2020",
+          "role": "Software Engineer",
+          "company": "Applications",
+          "description": "Work on enterprise applications, APIs, and system integration, with emphasis on maintenance and evolution in production."
+        }
+      ]
+    },
+    "projects": {
+      "title": "Projects",
+      "empty": "No projects found.",
+      "repo": "Repository",
+      "demo": "Demo",
+      "featured": "Featured"
+    },
+    "articles": {
+      "title": "Articles",
+      "search": "Search articles",
+      "all": "All",
+      "featured": "Featured",
+      "readMore": "Read more",
+      "draft": "Draft",
+      "sample": "Sample article",
+      "empty": "No articles found for this filter.",
+      "sort": "Sort by",
+      "sortOptions": {
+        "newest": "Newest first",
+        "oldest": "Oldest first"
+      },
+      "published": "Published",
+      "readingTime": "min read",
+      "share": "Share",
+      "back": "Back to articles",
+      "tableOfContents": "Table of contents",
+      "toc": "Quick navigation"
+    },
+    "education": {
+      "title": "Certifications and education",
+      "items": [
+        "Focused on backend development, distributed architecture, and product-oriented software engineering.",
+        "Hands-on experience in modernizing legacy systems and migrating toward modern architectures.",
+        "Continuous work in cloud, DevOps, and reliability engineering across the software lifecycle."
+      ]
+    },
+    "contact": {
+      "title": "Contact",
+      "text": "I am available to discuss architecture, backend systems, legacy modernization, cloud, and generative AI solutions.",
+      "email": "joaopedrodevdb@outlook.com",
+      "linkedin": "https://www.linkedin.com/in/joaopedroalves",
+      "github": "https://github.com/joaopedrodeb",
+      "location": "Cuiabá, Mato Grosso, Brazil",
+      "note": "Static website: connect an external email or form service to send messages."
+    },
+    "footer": {
+      "rights": "All rights reserved."
+    },
+    "language": "Language",
+    "theme": "Theme",
+    "backToTop": "Back to top",
+    "loading": "Loading",
+    "notFound": "Not found"
+  }
+}

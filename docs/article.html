@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Artigo técnico de João Pedro Alves." />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://joaopedrodeb.github.io/joaopedroalves.dev/article.html" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Artigo técnico de João Pedro Alves",
+        "author": {
+          "@type": "Person",
+          "name": "João Pedro Alves"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "João Pedro Alves"
+        },
+        "mainEntityOfPage": "https://joaopedrodeb.github.io/joaopedroalves.dev/article.html"
+      }
+    </script>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Artigo | João Pedro Alves</title>
+  </head>
+  <body data-lang="pt">
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="index.html" aria-label="Voltar para a página inicial">
+          <span class="brand-mark">JP</span>
+          <span>João Pedro Alves</span>
+        </a>
+
+        <nav id="site-nav" class="nav" aria-label="Main navigation">
+          <a href="index.html#about">Sobre</a>
+          <a href="index.html#projects">Projetos</a>
+          <a href="index.html#articles">Artigos</a>
+          <a href="index.html#contact">Contato</a>
+        </nav>
+
+        <div class="lang-switcher" aria-label="Language switcher">
+          <button type="button" data-lang-switch="pt" aria-label="Português" aria-pressed="true" class="active">PT</button>
+          <button type="button" data-lang-switch="en" aria-label="English" aria-pressed="false">EN</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <div class="article-header-actions" style="margin-bottom:1.5rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;">
+          <a class="button secondary" href="index.html#articles" id="back-to-articles">Voltar para artigos</a>
+          <button id="share-button" class="button secondary" type="button">Compartilhar</button>
+        </div>
+        <div id="article-content"></div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div>© <span id="year"></span> João Pedro Alves. Todos os direitos reservados.</div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/articles.js"></script>
+  </body>
+</html>
