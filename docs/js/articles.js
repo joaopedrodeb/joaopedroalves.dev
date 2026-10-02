@@ -32,6 +32,8 @@ function slugify(value = '') {
   return String(value)
     .trim()
     .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
     .replace(/[^a-z0-9\s-]/g, '')
     .replace(/\s+/g, '-')
     .replace(/-+/g, '-');
@@ -46,19 +48,44 @@ function renderMarkdown(markdown = '') {
 }
 
 function buildTocFromArticle(articleContent) {
-  const parser = new DOMParser();
-  const doc = parser.parseFromString(articleContent, 'text/html');
-  const headings = Array.from(doc.querySelectorAll('h1, h2, h3'));
+  const headings = Array.from(articleContent.querySelectorAll('h2, h3'));
   if (!headings.length) return '';
 
+  const usedIds = new Set();
   const items = headings.map((heading) => {
     const text = heading.textContent.trim();
-    const slug = slugify(text);
+    const base = slugify(text) || 'section';
+    let slug = base;
+    let suffix = 2;
+    while (usedIds.has(slug)) slug = `${base}-${suffix++}`;
+    usedIds.add(slug);
     heading.id = slug;
-    return `<li><a href="#${slug}">${text}</a></li>`;
+    return `<li><a href="#${slug}">${escapeHtml(text)}</a></li>`;
   }).join('');
 
-  return `<nav class="toc"><h3>${window.i18n?.getTranslation?.(document.body.dataset.lang || 'pt', 'articles.toc') || 'Quick navigation'}</h3><ol>${items}</ol></nav>`;
+  return `<h3>${window.i18n?.getTranslation?.(document.body.dataset.lang || 'pt', 'articles.toc') || 'Quick navigation'}</h3><ol>${items}</ol>`;
+}
+
+function renderFeaturedArticle(articles, lang) {
+  const container = document.getElementById('featured-article');
+  if (!container) return;
+  const article = articles.filter((item) => item.featured && item.status === 'published')
+    .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))[0];
+  container.hidden = !article;
+  if (!article) return;
+  const title = article.title[lang] || article.title.pt;
+  const description = article.description[lang] || article.description.pt;
+  container.innerHTML = `
+    <article class="featured-article card">
+      <img src="${escapeHtml(article.image)}" alt="${escapeHtml(title)}" width="640" height="360" loading="lazy" />
+      <div class="featured-article-content">
+        <span class="badge">${lang === 'en' ? 'Project in focus · Case study' : 'Projeto em evidência · Estudo de caso'}</span>
+        <h3>${escapeHtml(title)}</h3>
+        <p>${escapeHtml(description)}</p>
+        <div class="article-meta">${article.tags.map((tag) => `<span class="article-tag">${escapeHtml(tag)}</span>`).join('')}</div>
+        <a class="button primary" href="article.html?slug=${encodeURIComponent(article.slug)}&lang=${lang}">${lang === 'en' ? 'Explore the project' : 'Conhecer o projeto'} →</a>
+      </div>
+    </article>`;
 }
 
 async function loadArticlesList() {
@@ -68,6 +95,7 @@ async function loadArticlesList() {
   try {
     const articles = await fetchJson(ARTICLES_DATA_URL);
     const lang = document.body.dataset.lang || 'pt';
+    renderFeaturedArticle(articles, lang);
     const searchTerm = (document.getElementById('article-search')?.value || '').trim().toLowerCase();
     const selectedTag = document.getElementById('article-tag-filter')?.value || 'all';
     const sortValue = document.getElementById('article-sort')?.value || 'newest';
@@ -107,7 +135,7 @@ async function loadArticlesList() {
     listElement.innerHTML = filtered.map((article) => {
       const title = article.title?.[lang] || article.title?.pt || article.title?.en || 'Untitled';
       const description = article.description?.[lang] || article.description?.pt || article.description?.en || '';
-      const published = new Date(article.publishedAt || Date.now()).toLocaleDateString(lang === 'en' ? 'en-US' : 'pt-BR');
+      const published = new Date(article.publishedAt || Date.now()).toLocaleDateString(lang === 'en' ? 'en-US' : 'pt-BR', { timeZone: 'UTC' });
       const image = article.image || 'images/artigos/placeholder.svg';
       const tags = (article.tags || []).slice(0, 3).map((tag) => `<span class="article-tag">${tag}</span>`).join('');
       const draftLabel = article.status === 'draft' ? `<span class="badge">${window.i18n?.getTranslation?.(lang, 'articles.draft') || 'Draft'}</span>` : '';
@@ -134,13 +162,14 @@ async function loadArticlesList() {
   }
 }
 
-async function loadArticlePage() {
+async function loadArticlePage(requestedLang) {
   const articleRoot = document.getElementById('article-content');
   if (!articleRoot) return;
 
   const params = new URLSearchParams(window.location.search);
   const slug = params.get('slug');
-  const lang = params.get('lang') || document.body.dataset.lang || 'pt';
+  const preferredLang = requestedLang || params.get('lang') || document.body.dataset.lang;
+  const lang = preferredLang === 'en' ? 'en' : 'pt';
 
   try {
     const articles = await fetchJson(ARTICLES_DATA_URL);
@@ -151,9 +180,10 @@ async function loadArticlePage() {
     }
 
     const articlePath = article.content?.[lang] || article.content?.pt || article.content?.en;
-    const markdown = await fetch(articlePath).then((response) => response.text());
+    const response = await fetch(articlePath);
+    if (!response.ok) throw new Error(`Unable to load article: ${response.status}`);
+    const markdown = await response.text();
     const html = renderMarkdown(markdown);
-    const doc = new DOMParser().parseFromString(html, 'text/html');
     const articleStatusLabel = article.status === 'draft' ? (lang === 'en' ? 'Draft' : 'Rascunho') : (lang === 'en' ? 'Published' : 'Publicado');
 
     const title = article.title?.[lang] || article.title?.pt || article.title?.en || 'Untitled';
@@ -162,6 +192,21 @@ async function loadArticlePage() {
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) metaDescription.setAttribute('content', article.description?.[lang] || article.description?.pt || article.description?.en || '');
 
+    const canonical = document.querySelector('link[rel="canonical"]');
+    const pageUrl = new URL('article.html', canonical?.href || window.location.href);
+    pageUrl.search = new URLSearchParams({ slug: article.slug, lang }).toString();
+    if (canonical) canonical.href = pageUrl.href;
+    const structuredData = document.querySelector('script[type="application/ld+json"]');
+    if (structuredData) structuredData.textContent = JSON.stringify({
+      '@context': 'https://schema.org', '@type': 'Article', headline: title,
+      description: article.description?.[lang] || article.description?.pt,
+      datePublished: article.publishedAt, dateModified: article.updatedAt,
+      inLanguage: lang === 'en' ? 'en' : 'pt-BR',
+      image: new URL(article.image, pageUrl).href,
+      author: { '@type': 'Person', name: 'João Pedro Alves' },
+      mainEntityOfPage: pageUrl.href
+    });
+
     const articleHtml = `
       <div class="article-meta">
         <span class="badge">${articleStatusLabel}</span>
@@ -169,7 +214,7 @@ async function loadArticlePage() {
       </div>
       <h1>${title}</h1>
       <div class="meta-row">
-        <span>${new Date(article.publishedAt).toLocaleDateString(lang === 'en' ? 'en-US' : 'pt-BR')}</span>
+        <span>${new Date(article.publishedAt).toLocaleDateString(lang === 'en' ? 'en-US' : 'pt-BR', { timeZone: 'UTC' })}</span>
         <span>${article.readingTime || 5} ${window.i18n?.getTranslation?.(lang, 'articles.readingTime') || 'min read'}</span>
       </div>
       <div class="article-layout">
@@ -181,11 +226,19 @@ async function loadArticlePage() {
     `;
 
     articleRoot.innerHTML = articleHtml;
-    document.getElementById('article-toc').innerHTML = buildTocFromArticle(html);
+    const renderedArticle = articleRoot.querySelector('.article-shell article');
+    document.getElementById('article-toc').innerHTML = buildTocFromArticle(renderedArticle);
+    renderedArticle.querySelectorAll('table').forEach((table) => {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'article-table';
+      table.before(wrapper);
+      wrapper.append(table);
+    });
 
     const shareButton = document.getElementById('share-button');
     if (shareButton) {
-      shareButton.addEventListener('click', async () => {
+      shareButton.textContent = lang === 'en' ? 'Share' : 'Compartilhar';
+      shareButton.onclick = async () => {
         const shareUrl = window.location.href;
         if (navigator.share) {
           await navigator.share({ title, text: title, url: shareUrl });
@@ -193,7 +246,12 @@ async function loadArticlePage() {
           await navigator.clipboard.writeText(shareUrl);
           shareButton.textContent = lang === 'en' ? 'Copied!' : 'Copiado!';
         }
-      });
+      };
+    }
+    const backButton = document.getElementById('back-to-articles');
+    if (backButton) {
+      backButton.textContent = lang === 'en' ? 'Back to articles' : 'Voltar para artigos';
+      backButton.href = `index.html?lang=${lang}#articles`;
     }
   } catch (error) {
     console.error('Error loading article:', error);
@@ -214,9 +272,9 @@ function bindArticleFilters() {
   });
 }
 
-document.addEventListener('languagechange', () => {
+document.addEventListener('languagechange', (event) => {
   loadArticlesList();
-  loadArticlePage();
+  loadArticlePage(event.detail?.lang);
 });
 
 document.addEventListener('DOMContentLoaded', () => {

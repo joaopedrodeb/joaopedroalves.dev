@@ -1,5 +1,34 @@
 [
   {
+    "slug": "financas-familiares-aws-graphql",
+    "title": {
+      "pt": "Finanças em família: AWS, Terraform e uma API REST com GraphQL",
+      "en": "Family finances: AWS, Terraform, and a REST API with GraphQL"
+    },
+    "description": {
+      "pt": "Um estudo de caso em .NET 10: infraestrutura AWS com Terraform, login Google/Cognito e sincronização offline com autorização por família, versões e histórico. Inclui um guia para integrar o aplicativo.",
+      "en": "A .NET 10 case study: AWS infrastructure with Terraform, Google/Cognito login, and offline synchronization with family authorization, versions, and history. Includes an application integration guide."
+    },
+    "content": {
+      "pt": "articles/financas-familiares-aws-graphql.pt.md",
+      "en": "articles/financas-familiares-aws-graphql.en.md"
+    },
+    "image": "images/artigos/Captura%20de%20tela%202026-10-02%20090933.png",
+    "publishedAt": "2026-10-02",
+    "updatedAt": "2026-10-02",
+    "readingTime": 19,
+    "tags": [
+      ".NET",
+      "AWS",
+      "Terraform",
+      "REST",
+      "GraphQL",
+      "Offline Sync"
+    ],
+    "featured": true,
+    "status": "published"
+  },
+  {
     "slug": "event-driven-dotnet",
     "title": {
       "pt": "Arquitetura orientada a eventos com .NET e Kafka",
@@ -17,7 +46,11 @@
     "publishedAt": "2026-08-01",
     "updatedAt": "2026-08-01",
     "readingTime": 8,
-    "tags": [".NET", "Kafka", "Event-Driven Architecture"],
+    "tags": [
+      ".NET",
+      "Kafka",
+      "Event-Driven Architecture"
+    ],
     "featured": true,
     "status": "draft"
   },
@@ -39,7 +72,11 @@
     "publishedAt": "2026-08-02",
     "updatedAt": "2026-08-02",
     "readingTime": 7,
-    "tags": [".NET", "AWS", "Observability"],
+    "tags": [
+      ".NET",
+      "AWS",
+      "Observability"
+    ],
     "featured": false,
     "status": "draft"
   },
@@ -61,7 +98,12 @@
     "publishedAt": "2026-08-03",
     "updatedAt": "2026-08-03",
     "readingTime": 9,
-    "tags": ["Generative AI", "LLM", "RAG", "MCP"],
+    "tags": [
+      "Generative AI",
+      "LLM",
+      "RAG",
+      "MCP"
+    ],
     "featured": true,
     "status": "draft"
   },
@@ -83,7 +125,11 @@
     "publishedAt": "2026-08-04",
     "updatedAt": "2026-08-04",
     "readingTime": 10,
-    "tags": ["Microservices", "Architecture", "Legacy Systems"],
+    "tags": [
+      "Microservices",
+      "Architecture",
+      "Legacy Systems"
+    ],
     "featured": false,
     "status": "draft"
   }

@@ -35,6 +35,7 @@ async function loadProjects() {
             <div class="project-actions">
               ${repository ? `<a class="button secondary" href="${repository}" target="_blank" rel="noreferrer noopener">${window.i18n?.getTranslation?.(lang, 'projects.repo') || 'Repository'}</a>` : ''}
               ${demo ? `<a class="button secondary" href="${demo}" target="_blank" rel="noreferrer noopener">${window.i18n?.getTranslation?.(lang, 'projects.demo') || 'Demo'}</a>` : ''}
+              ${project.article ? `<a class="button secondary" href="article.html?slug=${encodeURIComponent(project.article)}&lang=${lang}">${lang === 'en' ? 'Case study' : 'Estudo de caso'}</a>` : ''}
             </div>
           </div>
         </article>

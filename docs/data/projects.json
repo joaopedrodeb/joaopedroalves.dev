@@ -1,5 +1,29 @@
 [
   {
+    "id": "family-finance-sync",
+    "title": {
+      "pt": "API de finanças e sincronização familiar",
+      "en": "Family finance and synchronization API"
+    },
+    "description": {
+      "pt": "Um estudo de caso em .NET 10: infraestrutura AWS com Terraform, login Google/Cognito e sincronização offline com autorização por família, versões e histórico. Inclui um guia para integrar o aplicativo.",
+      "en": "A .NET 10 case study: AWS infrastructure with Terraform, Google/Cognito login, and offline synchronization with family authorization, versions, and history. Includes an application integration guide."
+    },
+    "technologies": [
+      ".NET 10",
+      "PostgreSQL",
+      "AWS",
+      "Terraform",
+      "REST",
+      "GraphQL"
+    ],
+    "image": "images/artigos/Captura%20de%20tela%202026-10-02%20090933.png",
+    "repository": "https://github.com/joaopedrodeb/api-previsao-financeira",
+    "demo": "",
+    "article": "financas-familiares-aws-graphql",
+    "featured": true
+  },
+  {
     "id": "distributed-processing",
     "title": {
       "pt": "Processamento distribuído de dados",
@@ -9,7 +33,13 @@
       "pt": "Arquitetura backend para processamento assíncrono, mensageria e monitoramento em fluxo distribuído.",
       "en": "Backend architecture for asynchronous processing, messaging, and observability in a distributed flow."
     },
-    "technologies": [".NET", "Kafka", "Redis", "PostgreSQL", "Docker"],
+    "technologies": [
+      ".NET",
+      "Kafka",
+      "Redis",
+      "PostgreSQL",
+      "Docker"
+    ],
     "image": "images/projects/distributed-processing.webp",
     "repository": "",
     "demo": "",
@@ -25,7 +55,13 @@
       "pt": "Estratégia de evolução de serviços legados para APIs robustas, versionadas e sustentáveis.",
       "en": "Strategy to evolve legacy services into robust, versioned, and maintainable APIs."
     },
-    "technologies": ["C#", ".NET 8", "Azure", "SQL Server", "OpenAPI"],
+    "technologies": [
+      "C#",
+      ".NET 8",
+      "Azure",
+      "SQL Server",
+      "OpenAPI"
+    ],
     "image": "images/projects/api-modernization.webp",
     "repository": "",
     "demo": "",
@@ -41,7 +77,13 @@
       "pt": "Implementação de integrações assíncronas com desacoplamento, rastreabilidade e resiliência operacional.",
       "en": "Implementation of asynchronous integrations with decoupling, traceability, and operational resilience."
     },
-    "technologies": ["Java", "Kafka", "MongoDB", "Spring Boot", "Kubernetes"],
+    "technologies": [
+      "Java",
+      "Kafka",
+      "MongoDB",
+      "Spring Boot",
+      "Kubernetes"
+    ],
     "image": "images/projects/event-driven-platform.webp",
     "repository": "",
     "demo": "",
